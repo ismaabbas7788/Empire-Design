@@ -27,7 +27,7 @@ const SubcategoriesManagement = () => {
 
   const fetchSubcategories = async () => {
     try {
-      const response = await axios.get('http://localhost:5000/api/subcategories');
+      const response = await axios.get(`${process.env.REACT_APP_API_URL}/subcategories`);
       setSubcategories(response.data);
       setLoading(false);
     } catch (error) {
@@ -38,7 +38,7 @@ const SubcategoriesManagement = () => {
 
   const fetchCategories = async () => {
     try {
-      const response = await axios.get('http://localhost:5000/api/categories');
+      const response = await axios.get(`${process.env.REACT_APP_API_URL}/categories`);
       setCategories(response.data);
     } catch (error) {
       console.error('Error fetching categories:', error);
@@ -48,7 +48,7 @@ const SubcategoriesManagement = () => {
   const handleAddSubcategory = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('http://localhost:5000/api/subcategories', newSubcategory);
+      await axios.post(`${process.env.REACT_APP_API_URL}/subcategories`, newSubcategory);
       setNewSubcategory({ name: '', category_id: '' });
       fetchSubcategories();
       Swal.fire('Success', 'Subcategory added successfully', 'success');
@@ -73,7 +73,7 @@ const SubcategoriesManagement = () => {
 
   const handleEditSubmit = async () => {
     try {
-      await axios.put(`http://localhost:5000/api/subcategories/${editSubcategoryId}`, editSubcategory);
+      await axios.put(`${process.env.REACT_APP_API_URL}/subcategories/${editSubcategoryId}`, editSubcategory);
       fetchSubcategories();
       setEditSubcategoryId(null);
       setEditSubcategory({ name: '', category_id: '' });
@@ -95,7 +95,7 @@ const SubcategoriesManagement = () => {
 
     if (confirm.isConfirmed) {
       try {
-        await axios.delete(`http://localhost:5000/api/subcategories/${id}`);
+        await axios.delete(`${process.env.REACT_APP_API_URL}/subcategories/${id}`);
         fetchSubcategories();
         Swal.fire('Deleted!', 'Subcategory has been deleted.', 'success');
       } catch (error) {

@@ -13,7 +13,7 @@ export const Account  = () => {
     if (storedUser) {
       const parsedUser = JSON.parse(storedUser);
       axios
-        .post('http://localhost:5000/api/profile/user', { userId: parsedUser.id })
+        .post(`${process.env.REACT_APP_API_URL}/profile/user`, { userId: parsedUser.id })
         .then((res) => setUser(res.data))
         .catch((err) => console.error('Error fetching user data:', err));
     }
@@ -27,7 +27,7 @@ export const Account  = () => {
       formData.append('userId', user.id);
 
       axios
-        .post('http://localhost:5000/api/profile/update-profile', formData)
+        .post(`${process.env.REACT_APP_API_URL}/profile/update-profile`, formData)
         .then((res) => {
           setUser((u) => ({ ...u, profileImage: res.data.profileImage }));
         })
@@ -38,7 +38,7 @@ export const Account  = () => {
   const handleRemoveImage = () => {
     if (!user) return;
     axios
-      .post('http://localhost:5000/api/profile/remove-profile', { userId: user.id })
+      .post(`${process.env.REACT_APP_API_URL}/profile/remove-profile`, { userId: user.id })
       .then(() => {
         setUser((u) => ({ ...u, profileImage: null }));
       })

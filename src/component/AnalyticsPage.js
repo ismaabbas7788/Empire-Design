@@ -62,7 +62,7 @@ const AnalyticsPage = () => {
 
     try {
       const res = await fetch(
-        `http://localhost:5000/api/analytics/category-details/${categoryId}`
+        `${process.env.REACT_APP_API_URL}/analytics/category-details/${categoryId}`
       );
       if (!res.ok) throw new Error("Failed to fetch category details");
 
@@ -79,7 +79,7 @@ const AnalyticsPage = () => {
   useEffect(() => {
   const fetchSalesByProduct = async () => {
     try {
-      const response = await axios.get("http://localhost:5000/api/analytics/sales-by-product", {
+      const response = await axios.get(`${process.env.REACT_APP_API_URL}/analytics/sales-by-product`, {
         params: {
           startDate: salesStartDate ? salesStartDate.toISOString().split("T")[0] : null,
           endDate: salesEndDate ? salesEndDate.toISOString().split("T")[0] : null,
@@ -98,7 +98,7 @@ const AnalyticsPage = () => {
     const fetchTotalUsers = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:5000/api/analytics/total-users"
+          `${process.env.REACT_APP_API_URL}/analytics/total-users`
         );
         setTotalUsers(response.data.totalUsers || response.data.total || 0);
       } catch (error) {
@@ -109,7 +109,7 @@ const AnalyticsPage = () => {
     const fetchTotalOrders = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:5000/api/analytics/total-orders"
+          `${process.env.REACT_APP_API_URL}/analytics/total-orders`
         );
         setTotalOrders(response.data.totalOrders || 0);
       } catch (error) {
@@ -120,7 +120,7 @@ const AnalyticsPage = () => {
     const fetchTotalRevenue = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:5000/api/analytics/total-revenue"
+          `${process.env.REACT_APP_API_URL}/analytics/total-revenue`
         );
         setTotalRevenue(response.data.revenue || 0);
       } catch (error) {
@@ -131,7 +131,7 @@ const AnalyticsPage = () => {
     const fetchTopProducts = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:5000/api/analytics/top-products"
+          `${process.env.REACT_APP_API_URL}/analytics/top-products`
         );
         setTopProducts(response.data.products || []);
       } catch (error) {
@@ -142,7 +142,7 @@ const AnalyticsPage = () => {
     const fetchCategorySales = async () => {
   try {
     const response = await axios.get(
-      "http://localhost:5000/api/analytics/category-sales"
+      `${process.env.REACT_APP_API_URL}/analytics/category-sales`
     );
     console.log("Category Sales API:", response.data.data);
     setCategorySales(response.data.data || []);
@@ -154,7 +154,7 @@ const AnalyticsPage = () => {
     const fetchSalesSummary = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:5000/api/analytics/sales-summary"
+          `${process.env.REACT_APP_API_URL}/analytics/sales-summary`
         );
         setSalesSummary(response.data || {});
       } catch (error) {
@@ -174,7 +174,7 @@ const AnalyticsPage = () => {
   const fetchSalesData = async () => {
     setSalesLoading(true);
     try {
-      let url = `http://localhost:5000/api/analytics/sales-data?page=${salesPage}&limit=${salesLimit}`;
+      let url = `${process.env.REACT_APP_API_URL}/analytics/sales-data?page=${salesPage}&limit=${salesLimit}`;
       if (salesStartDate && salesEndDate) {
         url += `&startDate=${salesStartDate.toISOString().split("T")[0]}&endDate=${salesEndDate
           .toISOString()
@@ -200,7 +200,7 @@ const AnalyticsPage = () => {
     setLoadingReport(true);
     try {
       const response = await axios.get(
-        "http://localhost:5000/api/analytics/user-report",
+        `${process.env.REACT_APP_API_URL}/analytics/user-report`,
         {
           responseType: "blob",
         }
@@ -226,7 +226,7 @@ const AnalyticsPage = () => {
     setLoadingReport(true);
     try {
       const response = await axios.get(
-        "http://localhost:5000/api/analytics/orders-report",
+        `${process.env.REACT_APP_API_URL}/analytics/orders-report`,
         {
           responseType: "blob",
         }
@@ -300,7 +300,7 @@ const downloadSalesDataReport = async () => {
     }
 
     const response = await axios.get(
-      "http://localhost:5000/api/analytics/sales-data",
+      `${process.env.REACT_APP_API_URL}/analytics/sales-data`,
       { params }
     );
 

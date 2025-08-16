@@ -9,7 +9,7 @@ const AdminContactMessages = () => {
   // Fetch messages from backend
   useEffect(() => {
     axios
-      .get("http://localhost:5000/api/contact/all") // You’ll add this backend route below
+      .get(`${process.env.REACT_APP_API_URL}/contact/all`) // You’ll add this backend route below
       .then((res) => setMessages(res.data))
       .catch((err) => console.error(err));
   }, []);
@@ -23,7 +23,7 @@ const AdminContactMessages = () => {
     if (!response) return alert("Response cannot be empty.");
 
     try {
-      await axios.post(`http://localhost:5000/api/contact/reply/${id}`, {
+      await axios.post(`${process.env.REACT_APP_API_URL}/contact/reply/${id}`, {
         response,
       });
       setStatus("Reply sent successfully!");

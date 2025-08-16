@@ -23,7 +23,7 @@ const TrackOrder = () => {
     if (!orderId) return setError("Please enter your Order ID");
 
     try {
-      const res = await fetch(`http://localhost:5000/api/orders/track/${orderId}`);
+      const res = await fetch(`${process.env.REACT_APP_API_URL}/orders/track/${orderId}`);
       if (!res.ok) throw new Error("Order not found");
 
       const data = await res.json();

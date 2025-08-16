@@ -4,7 +4,7 @@ import Swal from 'sweetalert2';
 import { FiEdit, FiTrash2 } from 'react-icons/fi';
 import '../CategoryManagement.css';
 
-const API_BASE = 'http://localhost:5000/api/categories';
+const API_BASE = `${process.env.REACT_APP_API_URL}/categories`;
 
 const CategoryManagement = () => {
   const [categories, setCategories] = useState([]);

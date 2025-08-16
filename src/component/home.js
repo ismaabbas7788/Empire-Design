@@ -15,14 +15,14 @@ const Home = () => {
 
   useEffect(() => {
     axios
-      .get('http://localhost:5000/api/products/recent')
+      .get(`${process.env.REACT_APP_API_URL}/products/recent`)
       .then((res) => setRecentProducts(res.data))
       .catch((err) => console.error('Error fetching recent products:', err));
   }, []);
 
   useEffect(() => {
     axios
-      .get('http://localhost:5000/api/products/top-sellers')
+      .get(`${process.env.REACT_APP_API_URL}/products/top-sellers`)
       .then((res) => setTopSellers(res.data))
       .catch((err) => console.error('Error fetching top sellers:', err));
   }, []);

@@ -35,7 +35,7 @@ export const Login = () => {
     }
 
     try {
-      const response = await axios.post('http://localhost:5000/api/auth/login', {
+      const response = await axios.post(`${process.env.REACT_APP_API_URL}/auth/login`, {
         email,
         password,
         role,
@@ -61,7 +61,7 @@ export const Login = () => {
   const handleGoogleLogin = async (credentialResponse) => {
     try {
       const decoded = jwtDecode(credentialResponse.credential);
-      const res = await axios.post('http://localhost:5000/api/auth/google-login', {
+      const res = await axios.post(`${process.env.REACT_APP_API_URL}/auth/google-login`, {
         email: decoded.email,
         firstName: decoded.given_name,
         lastName: decoded.family_name,

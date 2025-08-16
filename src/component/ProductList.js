@@ -20,11 +20,11 @@ const ProductList = () => {
   const fetchProducts = () => {
     let apiUrl = '';
     if (subcategoryId) {
-      apiUrl = `http://localhost:5000/api/categories/subcategories/${subcategoryId}/products`;
+      apiUrl = `${process.env.REACT_APP_API_URL}/categories/subcategories/${subcategoryId}/products`;
     } else if (categoryId) {
-      apiUrl = `http://localhost:5000/api/categories/${categoryId}/products`;
+      apiUrl = `${process.env.REACT_APP_API_URL}/categories/${categoryId}/products`;
     } else {
-      apiUrl = `http://localhost:5000/api/categories/all-products`;
+      apiUrl = `${process.env.REACT_APP_API_URL}/categories/all-products`;
     }
 
     const params = new URLSearchParams();

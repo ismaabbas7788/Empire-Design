@@ -18,7 +18,7 @@ export const Header = () => {
     if (storedUser) {
       const parsedUser = JSON.parse(storedUser);
       axios
-        .post('http://localhost:5000/api/profile/user', { userId: parsedUser.id })
+        .post(`${process.env.REACT_APP_API_URL}/profile/user`, { userId: parsedUser.id })
         .then((res) => {
           setUser(res.data);
           localStorage.setItem('user', JSON.stringify(res.data));
@@ -52,12 +52,12 @@ export const Header = () => {
 
   useEffect(() => {
     axios
-      .get('http://localhost:5000/api/categories')
+      .get(`${process.env.REACT_APP_API_URL}/categories`)
       .then((res) => {
         const categoriesData = res.data;
         const subcategoryPromises = categoriesData.map((category) =>
           axios
-            .get(`http://localhost:5000/api/categories/${category.id}/subcategories`)
+            .get(`${process.env.REACT_APP_API_URL}/categories/${category.id}/subcategories`)
             .then((subRes) => {
               category.subcategories = subRes.data;
               return category;

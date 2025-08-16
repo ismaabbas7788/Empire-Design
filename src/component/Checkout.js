@@ -93,7 +93,7 @@ const Checkout = () => {
     };
 
     try {
-      const response = await fetch("http://localhost:5000/api/orders/place-order", {
+      const response = await fetch(`${process.env.REACT_APP_API_URL}/orders/place-order`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

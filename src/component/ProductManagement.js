@@ -19,7 +19,7 @@ const ProductSection = () => {
   const [currentStep, setCurrentStep] = useState('list'); // 'list' or 'form'
 
   useEffect(() => {
-    axios.get('http://localhost:5000/api/categories')
+    axios.get(`${process.env.REACT_APP_API_URL}/categories`)
       .then(res => setCategories(res.data))
       .catch(err => console.error('Failed to fetch categories', err));
   }, []);
@@ -30,7 +30,7 @@ const ProductSection = () => {
       setSelectedSubcategoryId('');
       return;
     }
-    axios.get(`http://localhost:5000/api/categories/${selectedCategoryId}/subcategories`)
+    axios.get(`${process.env.REACT_APP_API_URL}/categories/${selectedCategoryId}/subcategories`)
       .then(res => setSubcategories(res.data))
       .catch(err => console.error('Failed to fetch subcategories', err));
   }, [selectedCategoryId]);
@@ -40,14 +40,14 @@ const ProductSection = () => {
       setProducts([]);
       return;
     }
-    axios.get(`http://localhost:5000/api/products?subcategoryId=${selectedSubcategoryId}`)
+    axios.get(`${process.env.REACT_APP_API_URL}/products?subcategoryId=${selectedSubcategoryId}`)
       .then(res => setProducts(res.data))
       .catch(err => console.error('Failed to fetch products', err));
   }, [selectedSubcategoryId]);
 
 const loadProductColumns = async () => {
   try {
-    const res = await axios.get('http://localhost:5000/api/products/columns');
+    const res = await axios.get(`${process.env.REACT_APP_API_URL}/products/columns`);
     setProductColumns(res.data);
 
     const initialData = {};
@@ -90,8 +90,8 @@ res.data.forEach(col => {
 
     try {
       const url = editingProductId
-        ? `http://localhost:5000/api/products/${editingProductId}`
-        : 'http://localhost:5000/api/products';
+        ? `${process.env.REACT_APP_API_URL}/products/${editingProductId}`
+        : `${process.env.REACT_APP_API_URL}/products`;
 
       const method = editingProductId ? 'PUT' : 'POST';
 
@@ -120,7 +120,7 @@ res.data.forEach(col => {
         });
         setNewProductData(resetData);
 
-        axios.get(`http://localhost:5000/api/products?subcategoryId=${selectedSubcategoryId}`)
+        axios.get(`${process.env.REACT_APP_API_URL}/products?subcategoryId=${selectedSubcategoryId}`)
           .then(res => setProducts(res.data));
       } else {
         Swal.fire({
@@ -167,10 +167,10 @@ res.data.forEach(col => {
       cancelButtonText: 'Cancel'
     }).then((result) => {
       if (result.isConfirmed) {
-        axios.delete(`http://localhost:5000/api/products/${productId}`)
+        axios.delete(`${process.env.REACT_APP_API_URL}/products/${productId}`)
           .then(() => {
             Swal.fire('Deleted!', 'Product has been deleted.', 'success');
-            axios.get(`http://localhost:5000/api/products?subcategoryId=${selectedSubcategoryId}`)
+            axios.get(`${process.env.REACT_APP_API_URL}/products?subcategoryId=${selectedSubcategoryId}`)
               .then(res => setProducts(res.data));
           })
           .catch(() => {

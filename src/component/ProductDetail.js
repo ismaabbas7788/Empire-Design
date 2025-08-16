@@ -59,14 +59,14 @@ const ProductDetail = () => {
   const lastMousePos = useRef({ x: 0, y: 0 });
 
   useEffect(() => {
-    axios.get(`http://localhost:5000/api/products/${id}`)
+    axios.get(`${process.env.REACT_APP_API_URL}/products/${id}`)
       .then(res => setProduct(res.data))
       .catch(err => console.error('❌', err));
     fetchReviews();
   }, [id]);
 
   const fetchReviews = () => {
-    axios.get(`http://localhost:5000/api/products/${id}/reviews`)
+    axios.get(`${process.env.REACT_APP_API_URL}/products/${id}/reviews`)
       .then(res => {
         const sortedReviews = [...res.data].sort((a, b) => new Date(b.created_at) - new Date(a.created_at));
         setReviews(sortedReviews);
@@ -98,7 +98,7 @@ const ProductDetail = () => {
       return;
     }
 
-    axios.post(`http://localhost:5000/api/products/${id}/reviews`, {
+    axios.post(`${process.env.REACT_APP_API_URL}/products/${id}/reviews`, {
       user_name: user.username || user.email,
       rating: +rating,
       review: trimmedComment,

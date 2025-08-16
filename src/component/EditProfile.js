@@ -18,7 +18,7 @@ export const EditProfile = () => {
     if (storedUser) {
       const parsedUser = JSON.parse(storedUser);
       axios
-        .post('http://localhost:5000/api/profile/user', { userId: parsedUser.id })
+        .post(`${process.env.REACT_APP_API_URL}/profile/user`, { userId: parsedUser.id })
         .then((response) => {
           setUser({
             firstName: response.data.firstName,
@@ -79,7 +79,7 @@ export const EditProfile = () => {
     const storedUser = JSON.parse(localStorage.getItem('user'));
 
     axios
-      .post('http://localhost:5000/api/profile/update-details', {
+      .post(`${process.env.REACT_APP_API_URL}/profile/update-details`, {
         userId: storedUser.id,
         ...user,
       })

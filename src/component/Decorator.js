@@ -15,9 +15,9 @@ const Decorator = () => {
   useEffect(() => {
     const img = localStorage.getItem("uploadedRoomImage");
     if (img) setRoomImage(img);
-    axios.get("http://localhost:5000/api/categories").then((res) => setCategories(res.data));
-    axios.get("http://localhost:5000/api/subcategories").then((res) => setSubcategories(res.data));
-    axios.get("http://localhost:5000/api/products").then((res) => setProducts(res.data));
+    axios.get(`${process.env.REACT_APP_API_URL}/categories`).then((res) => setCategories(res.data));
+    axios.get(`${process.env.REACT_APP_API_URL}/subcategories`).then((res) => setSubcategories(res.data));
+    axios.get(`${process.env.REACT_APP_API_URL}/products`).then((res) => setProducts(res.data));
   }, []);
 
   const filteredSubcategories = selectedCategoryId

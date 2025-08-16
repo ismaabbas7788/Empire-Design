@@ -17,7 +17,7 @@ const OrderHistory = () => {
     }
 
     axios
-      .get(`http://localhost:5000/api/orders/history/${user.id}`)
+      .get(`${process.env.REACT_APP_API_URL}/orders/history/${user.id}`)
       .then((res) => {
         if (Array.isArray(res.data)) {
           setOrders(res.data);

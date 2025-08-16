@@ -31,7 +31,7 @@ export const ChangePassword = () => {
     const storedUser = JSON.parse(localStorage.getItem('user'));
 
     try {
-      const response = await axios.post('http://localhost:5000/api/profile/change-password', {
+      const response = await axios.post(`${process.env.REACT_APP_API_URL}/profile/change-password`, {
         userId: storedUser.id,
         oldPassword,
         newPassword,

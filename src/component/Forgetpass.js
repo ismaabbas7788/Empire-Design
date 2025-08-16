@@ -29,7 +29,7 @@ const ForgetPass = () => {
     }
 
     try {
-      const response = await axios.post('http://localhost:5000/api/auth/forgot-password', { email });
+      const response = await axios.post(`${process.env.REACT_APP_API_URL}/auth/forgot-password`, { email });
       if (response.status === 200) {
         setMessage('A confirmation code has been sent to your email!');
         setStep(2); // Move to the next step
@@ -53,7 +53,7 @@ const ForgetPass = () => {
     }
 
     try {
-      const response = await axios.post('http://localhost:5000/api/auth/verify-code', { email, confirmationCode });
+      const response = await axios.post(`${process.env.REACT_APP_API_URL}/auth/verify-code`, { email, confirmationCode });
       if (response.status === 200) {
         setMessage('Your account has been successfully verified!');
         setStep(3); // Move to the final step
@@ -82,7 +82,7 @@ const ForgetPass = () => {
     }
 
     try {
-      const response = await axios.post('http://localhost:5000/api/auth/reset-password', { email, newPassword });
+      const response = await axios.post(`${process.env.REACT_APP_API_URL}/auth/reset-password`, { email, newPassword });
       if (response.status === 200) {
         setMessage('Your password has been successfully updated!');
         showMessage(); // Show the message with auto-hide
@@ -104,7 +104,7 @@ const ForgetPass = () => {
     setIsResending(true);
     setMessage('');
     try {
-      const response = await axios.post('http://localhost:5000/api/auth/resend-code', { email });
+      const response = await axios.post(`${process.env.REACT_APP_API_URL}/auth/resend-code`, { email });
       if (response.status === 200) {
         setMessage('A new confirmation code has been sent to your email.');
         showMessage();

@@ -26,7 +26,7 @@ const WebsiteReviewPage = () => {
 
   const fetchWebsiteReviews = () => {
     axios
-      .get('http://localhost:5000/api/website/reviews')
+      .get(`${process.env.REACT_APP_API_URL}/website/reviews`)
       .then((res) => setReviews(res.data))
       .catch((err) => console.error('❌', err));
   };
@@ -40,7 +40,7 @@ const WebsiteReviewPage = () => {
     }
 
     axios
-      .post('http://localhost:5000/api/website/reviews', {
+      .post(`${process.env.REACT_APP_API_URL}/website/reviews`, {
         user_name: user.name || user.email,
         rating,
         review: reviewText,

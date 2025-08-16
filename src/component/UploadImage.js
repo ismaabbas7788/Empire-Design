@@ -41,7 +41,7 @@ const UploadImage = () => {
     formData.append("image", image);
 
     try {
-      await axios.post("http://localhost:5000/api/upload", formData);
+      await axios.post(`${process.env.REACT_APP_API_URL}/upload`, formData);
       alert("Image uploaded successfully!");
       setShowFullScreen(true);
     } catch (error) {

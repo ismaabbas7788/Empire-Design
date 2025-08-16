@@ -18,7 +18,7 @@ const SearchResults = () => {
 
   // Fetch categories once on mount
   useEffect(() => {
-    axios.get('http://localhost:5000/api/categories')
+    axios.get(`${process.env.REACT_APP_API_URL}/categories`)
       .then(res => setCategories(res.data))
       .catch(err => console.error('Error fetching categories:', err));
   }, []);
@@ -31,7 +31,7 @@ const SearchResults = () => {
       return;
     }
 
-    axios.get(`http://localhost:5000/api/categories/${category}/subcategories`)
+    axios.get(`${process.env.REACT_APP_API_URL}/categories/${category}/subcategories`)
       .then(res => setSubcategories(res.data))
       .catch(err => console.error('Error fetching subcategories:', err));
 
@@ -46,7 +46,7 @@ const SearchResults = () => {
       return;
     }
 
-    let url = `http://localhost:5000/api/search?search=${encodeURIComponent(query)}`;
+    let url = `${process.env.REACT_APP_API_URL}/search?search=${encodeURIComponent(query)}`;
 
     if (subcategory) {
       url += `&subcategory=${encodeURIComponent(subcategory)}`;

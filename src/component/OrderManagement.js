@@ -25,7 +25,7 @@ const OrderManagement = () => {
     setLoading(true);
     setError(null);
     try {
-      const res = await axios.get('http://localhost:5000/api/orders');
+      const res = await axios.get(`${process.env.REACT_APP_API_URL}/orders`);
       const data = res.data;
 
       if (data.length > 0) {
@@ -46,7 +46,7 @@ const OrderManagement = () => {
     setLoadingDetails(true);
     setDetailsError(null);
     try {
-      const res = await axios.get(`http://localhost:5000/api/orders/${orderId}`);
+      const res = await axios.get(`${process.env.REACT_APP_API_URL}/orders/${orderId}`);
       setSelectedOrder(res.data);
     } catch (err) {
       setDetailsError('Failed to load order details.');
@@ -65,7 +65,7 @@ const OrderManagement = () => {
 
   const handleStatusUpdate = async () => {
     try {
-      await axios.put(`http://localhost:5000/api/orders/${selectedOrder.order_id}`, {
+      await axios.put(`${process.env.REACT_APP_API_URL}/orders/${selectedOrder.order_id}`, {
         status: editStatus,
       });
       setEditModalOpen(false);
