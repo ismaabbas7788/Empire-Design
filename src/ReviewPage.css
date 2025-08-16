@@ -1,0 +1,16 @@
+.star:hover {
+transform: scale(1.2);
+transition: transform 0.2s ease-in-out;
+}
+
+.card-body textarea {
+resize: none;
+}
+
+.card {
+border-radius: 1rem;
+}
+
+.card .card-body {
+padding: 2rem;
+}

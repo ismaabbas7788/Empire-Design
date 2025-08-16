@@ -1,0 +1,160 @@
+/* Container */
+.order-management-container {
+  padding: 1.5rem;
+  max-width: 100%;
+  margin-left: 282px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  background-color: #f9fafb;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px #00000014;
+  overflow-x: auto;
+}
+
+/* Responsive wrapper */
+.table-wrapper {
+  overflow-x: auto;
+  max-width: 80%;
+}
+
+/* Orders Table */
+.orders-table {
+  width: 100%;
+  min-width: 900px; /* you can adjust this */
+  border-collapse: collapse;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  font-size: 1rem;
+  table-layout: fixed;
+}
+
+/* Table Head */
+.orders-table th,
+.orders-table td {
+  padding: 0.9rem;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+/* Specific column widths (optional) */
+.orders-table th:nth-child(1),
+.orders-table td:nth-child(1) {
+  width: 120px;
+}
+.orders-table th:nth-child(2),
+.orders-table td:nth-child(2) {
+  width: 150px;
+}
+
+/* Table styling continues... */
+.orders-table th {
+  background-color: #f1f5f9;
+  font-weight: 600;
+  color: #555;
+}
+
+.orders-table tbody tr:nth-child(even) {
+  background-color: #f7f7f7;
+}
+
+.orders-table tbody tr:hover {
+  background-color: #e6f7ff;
+}
+
+.orders-table button {
+  padding: 0.4rem 0.8rem;
+  font-size: 0.875rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-right: 0.5rem;
+}
+
+.orders-table button.save {
+  background-color: #2563eb;
+  color: white;
+}
+.orders-table button.cancel {
+  background-color: #9ca3af;
+  color: white;
+}
+.orders-table button.delete {
+  background-color: #ef4444;
+  color: white;
+}
+
+/* Modal Overlay: full screen fixed overlay with dark transparent background */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 24px;
+  border-radius: 8px;
+  max-width: 600px;
+  width: 90%;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Close button */
+.modal-close-button {
+  position: absolute;
+  top: 0.5rem;
+  right: 1rem;
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #666;
+  transition: color 0.2s ease;
+}
+
+.modal-close-button:hover {
+  color: #111;
+}
+
+/* New Edit Button */
+.orders-table button.edit {
+  background-color: #10b981; /* Tailwind emerald-500 */
+  color: white;
+}
+
+/* Modal Dropdown */
+.modal-content select {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 0.5rem;
+  font-size: 1rem;
+  width: 100%;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Modal Update Button */
+.modal-content button.update-status-btn {
+  background-color: #2563eb; /* blue-600 */
+  color: white;
+  padding: 0.5rem 1.2rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.modal-content button.update-status-btn:hover {
+  background-color: #1d4ed8; /* darker blue */
+}

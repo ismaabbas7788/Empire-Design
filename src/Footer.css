@@ -1,0 +1,95 @@
+.footer {
+    background-color: #ffffff;
+    padding-top: 50px; /* Smaller padding for a smaller footer */
+    padding-bottom: 50px; /* Smaller padding for a smaller footer */
+
+    font-size: 14px; /* Smaller font size */
+  }
+  
+  .footer .container {
+    text-align: left; /* Left-align the content */
+  }
+  
+  .footer .row {
+    display: flex;
+    justify-content: space-between; /* Ensure space between columns */
+  }
+  
+  .footer .col {
+    flex: 1; /* Allow columns to take equal width */
+  }
+  
+  .footer .social-icons a {
+    margin-right: 10px;
+    text-decoration: none;
+    color: #333;
+  }
+  
+  .footer .social-icons i {
+    font-size: 18px;
+  }
+  
+  .footer .footer-bottom {
+    text-align: left; /* Left-align the footer bottom text */
+    font-size: 12px; /* Smaller font size for bottom section */
+  }
+  
+  .footer .footer-bottom a {
+    color: #333;
+    text-decoration: none;
+  }
+  
+  .footer .footer-bottom a:hover {
+    color: #f18f01; /* Hover effect color */
+  }
+  
+  /* Light grey and small font for the links and contact info */
+  .footer h5 {
+    font-size: 14px;
+    color: #000000; /* Light grey for the headings */
+  }
+  
+  .footer ul li a {
+    color: #676363; /* Light grey for the links */
+    font-size: 12px; /* Smaller font size for the links */
+    text-decoration: none;
+  }
+  
+  .footer ul li a:hover {
+    color: #f18f01; /* Hover color */
+  }
+  
+  .footer p {
+    font-size: 12px; /* Smaller font size for paragraphs */
+    color: #676363; /* Light grey color */
+  }
+  /* Styling for the Sign Up Form */
+.footer .col form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Add space between form elements */
+  }
+  
+  .footer .col form input {
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 10px;
+  }
+  
+  .footer .col form button {
+    padding: 10px;
+    font-size: 14px;
+    background-color: #fb7b6a;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .footer .col form button:hover {
+    background-color: #fb7b6a; /* Darken the button on hover */
+  }
+  

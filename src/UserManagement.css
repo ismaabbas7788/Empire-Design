@@ -1,0 +1,13 @@
+.btn-fixed-width {
+  min-width: 100px;
+}
+.icon-button {
+  background-color: #f0f0f0;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 4px;
+}
+
+.icon-button:hover {
+  background-color: #e0e0e0;
+}

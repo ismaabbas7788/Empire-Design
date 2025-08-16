@@ -1,0 +1,138 @@
+/* Container tweaks */
+.product-detail-wrapper .average-rating {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.product-detail-wrapper .avg-number {
+  margin-left: 0.25rem;
+  color: #555;
+}
+
+/* Star styles */
+.stars {
+  display: inline-flex;
+}
+.star {
+  margin-right: 2px;
+  color: #ccc;          /* empty star color */
+}
+.star.filled {
+  color: #f5a623;       /* Amazon/gold star color */
+}
+
+/* Review item */
+.review {
+  margin-bottom: 1.5rem;
+}
+.review-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.25rem;
+}
+
+/* Optional: hover effect on stars if you later want clickable stars */
+.stars .star:hover {
+  cursor: pointer;
+}
+
+/* Interactive stars for the review form */
+.star-input {
+  display: inline-flex;
+  gap: 4px;
+  margin-bottom: 8px;
+}
+
+.star-input .star {
+  cursor: pointer;
+  font-size: 24px;
+  color: #ccc;            /* empty star */
+  transition: color 0.2s;
+}
+
+.star-input .star.filled {
+  color: #f5a623;         /* gold star */
+}
+
+.star-input .star:hover,
+.star-input .star:hover ~ .star {
+  /* hover effect: highlight current and all before */
+  color: #f5a623;
+}
+/* Quantity selector (like cart slider) */
+.quantity-selector {
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.qty-btn {
+  border: 1px solid #ccc;
+  background: white;
+  padding: 6px 10px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.qty-btn:hover {
+  background: #f0f0f0;
+}
+.qty-number {
+  padding: 0 12px;
+  font-size: 1rem;
+}
+.uploaded-image-container img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+.room-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow-y: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem; /* adds space around modal */
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 999;
+}
+
+.room-modal {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 1000px;
+  position: relative;
+}
+
+.room-preview {
+  position: relative;
+  width: 100%;
+  max-height: 600px;
+  overflow: hidden;
+}
+
+.uploaded-room-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 20;
+}
+.drag-handle {
+  cursor: grab;
+}
+.dragging {
+  cursor: grabbing !important;
+}

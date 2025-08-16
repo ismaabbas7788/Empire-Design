@@ -1,0 +1,234 @@
+/* Checkout Container */
+.checkout-container {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.checkout-container .checkout-sections {
+  display: flex;
+  width: 80%;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.checkout-container .left-section {
+  flex: 1;
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.checkout-container .right-section {
+  flex: 1;
+  padding: 30px;
+  background-color: #f9f9f9;
+  border-left: 1px solid #ddd;
+}
+
+.checkout-container .divider {
+  width: 1px;
+  background-color: #ddd;
+  margin: 0 20px;
+}
+
+.checkout-container .order-summary {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.checkout-container .order-summary h3 {
+  font-size: 1.5rem;
+  color: #333;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.checkout-container .order-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.checkout-container .order-item img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+}
+
+.checkout-container .product-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.checkout-container .product-details span {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Pricing Styles */
+.checkout-container .pricing {
+  margin-top: 20px;
+}
+
+.checkout-container .pricing .subtotal,
+.checkout-container .pricing .shipping,
+.checkout-container .pricing .total {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.checkout-container .price {
+  font-weight: bold;
+}
+
+.checkout-container .free-shipping {
+  color: #2980b9;
+}
+
+.checkout-container .place-order-btn {
+  margin-top: 20px;
+}
+
+/* Button Styles */
+.checkout-container button {
+  width: 100%;
+  padding: 8px 12px;
+  background-color: #000000;
+  color: #fff;
+  font-size: 0.875rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-bottom: 20px;
+}
+
+.checkout-container button:hover {
+  background-color: #444;
+}
+
+.checkout-container button:active {
+  background-color: #222;
+}
+
+/* Left Section Headings */
+.checkout-container h4 {
+  font-size: 1.8rem;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+  font-weight: bold;
+}
+
+/* Shipping Form */
+.checkout-container .shipping-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.checkout-container .shipping-form input,
+.checkout-container .shipping-form select {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 18px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 1rem;
+  color: #333;
+  background-color: #f9f9f9;
+  box-sizing: border-box;
+}
+
+.checkout-container .shipping-form input::placeholder {
+  color: #888;
+}
+
+.checkout-container .shipping-form input:focus,
+.checkout-container .shipping-form select:focus {
+  border-color: #2980b9;
+  outline: none;
+}
+
+.checkout-container .shipping-form select {
+  background-color: #fff;
+}
+
+.checkout-container .shipping-form label {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+/* Address Fields */
+.checkout-container .shipping-form .address-field {
+  width: 100%;
+}
+
+.checkout-container .shipping-form .wide-field {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 18px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 1rem;
+  color: #333;
+  background-color: #f9f9f9;
+  box-sizing: border-box;
+}
+
+.checkout-container .shipping-form .two-fields {
+  display: flex;
+  justify-content: space-between;
+}
+
+.checkout-container .shipping-form .two-fields input {
+  width: 48%;
+}
+
+.checkout-container .shipping-form .select-country {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 18px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 1rem;
+  color: #333;
+  background-color: #fff;
+  box-sizing: border-box;
+}
+
+.checkout-container .shipping-form .select-country select {
+  width: 100%;
+}
+.checkout-container .order-item .item-info {
+  display: flex;
+  align-items: center;
+  gap: 15px; /* Adjust spacing here */
+}
+.message.success {
+  color: #155724;
+  background-color: #d4edda;
+  border: 1px solid #c3e6cb;
+}
+
+.message.error {
+  color: #721c24;
+  background-color: #f8d7da;
+  border: 1px solid #f5c6cb;
+}
+.error {
+  color: #721c24;
+  background-color: #f8d7da;
+  border: 1px solid #f5c6cb;
+}

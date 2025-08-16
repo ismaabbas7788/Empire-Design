@@ -1,0 +1,69 @@
+.container-fluid {
+  min-height: 100vh;
+  background-color: #f8f9fa;
+  padding: 30px 15px;
+}
+  /* Login container settings */
+ .login-container {
+  max-width: 900px;
+  width: 100%;
+  min-height: 500px;
+}
+  
+  
+  /* Image Section */
+ .img-fluid {
+  object-fit: cover;
+  height: 100%;
+  border-right: 1px solid #dee2e6;
+}
+  /* Right Login Section */
+  .col-md-6 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  /* Optional: Style the headings */
+  h1, h4 {
+    text-align: left;
+  }
+  
+  .custom-border {
+    border: 1px solid #0D6EFD;
+    color:#0D6EFD;
+  
+  }
+  .left-align {
+    text-align: left;
+    margin-bottom: 30px; /* Adjust the space between them as needed */
+  }
+  .button-container {
+    display: flex;
+    gap: 10px; /* Adjust the gap between buttons */
+    color:black;
+  
+  
+  }
+  .btn-outline-primary, .btn-outline-secondary {
+    border-color: black; /* Make the border black */
+    color: black; /* Make the text black */
+  }
+  
+  .btn-outline-primary:hover, .btn-outline-secondary:hover {
+    background-color: #afb0b0; /* Optional: add a background color on hover */
+    border-color: #bec0c1; /* Make the border black */
+  
+    color: white; /* Optional: change text color to white on hover */
+  }
+  
+  .custom-font{
+  font-size:13px;
+  }
+
+small.text-danger {
+  font-weight: normal !important;
+  font-size: 0.85rem;
+}

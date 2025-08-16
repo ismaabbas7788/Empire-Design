@@ -1,0 +1,89 @@
+
+
+.product-heading {
+    font-weight: 700;
+    font-size: 2rem;
+    color: #00000000;
+  }
+  
+  .product-card {
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    min-height: 180px;
+  }
+  
+  .product-card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  .product-image-container {
+    width: 140px;
+    height: 140px;
+    overflow: hidden;
+    border-radius: 10px;
+    background: #f8f8f8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .product-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .no-image {
+    width: 100%;
+    height: 100%;
+    color: #aaa;
+    font-size: 14px;
+    text-align: center;
+    line-height: 140px;
+    background: #f0f0f0;
+    border-radius: 10px;
+  }
+  
+  .product-details {
+    flex: 1;
+  }
+  
+  .product-name {
+    font-weight: 600;
+    font-size: 1.2rem;
+  }
+  
+  .product-description {
+    font-size: 0.9rem;
+    color: #666;
+  }
+  
+  .product-price {
+    color: #000;
+    font-size: 1rem;
+  }
+
+  .banner-image {
+    width: 90%; /* smaller than full width */
+    height: 80%;
+    border-radius: 12px;
+    object-fit: cover;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+
+.out-of-stock-img {
+  opacity: 0.5;
+  filter: grayscale(80%);
+}
+
+.form-check-input {
+  border: 2px solid #545454 !important;
+  width: 1.2rem;
+  height: 1.2rem;
+}
+
+  /* Center wrapper is already handled via Bootstrap classes now */
+  

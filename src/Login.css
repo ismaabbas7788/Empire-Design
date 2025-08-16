@@ -1,0 +1,71 @@
+.container-fluid {
+  min-height: 80vh; /* Full height of the viewport */
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Vertically center the content */
+  background-color: #f8f9fa; /* Optional: Add background color */
+}
+
+/* Login container settings */
+.login-container {
+  display: flex; /* Flexbox layout */
+  flex-direction: row; /* Align items in a row (for image and login form) */
+  max-width: 900px; /* Optional: Limit the max width */
+  width: 100%; /* Ensure the container is responsive */
+  height: 540px; /* Set a fixed height for the login container */
+  border-radius: 8px; /* Optional: Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Shadow for aesthetics */
+}
+
+
+/* Image Section */
+.img-fluid {
+  object-fit: cover;
+  height: 100%; /* Ensure the image takes the full height */
+}
+
+/* Right Login Section */
+.col-md-6 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Optional: Style the headings */
+h1, h4 {
+  text-align: left;
+}
+
+.custom-border {
+  border: 1px solid #0D6EFD;
+  color:#0D6EFD;
+
+}
+.left-align {
+  text-align: left;
+  margin-bottom: 30px; /* Adjust the space between them as needed */
+}
+.button-container {
+  display: flex;
+  gap: 10px; /* Adjust the gap between buttons */
+  color:black;
+
+
+}
+.btn-outline-primary, .btn-outline-secondary {
+  border-color: black; /* Make the border black */
+  color: black; /* Make the text black */
+}
+
+.btn-outline-primary:hover, .btn-outline-secondary:hover {
+  background-color: #afb0b0; /* Optional: add a background color on hover */
+  border-color: #bec0c1; /* Make the border black */
+
+  color: white; /* Optional: change text color to white on hover */
+}
+
+.custom-font{
+font-size:13px;
+}

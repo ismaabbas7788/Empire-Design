@@ -1,0 +1,264 @@
+ .img {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+}
+
+.container img:hover {
+  transform: scale(1.05);
+  transition: transform 0.2s ease-in-out;
+}
+.container h1 {
+  font-family: 'Arial', sans-serif;
+  font-weight: bold;
+  color: #333;
+}
+
+.bg-light {
+  background-color: #f8f9fa !important;
+}
+
+.shadow-sm {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) !important;
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+.img-fluid {
+  border-radius: 10px;
+}
+
+h5 {
+  font-size: 1.25rem;
+  margin-top: 10px;
+  font-family: 'Arial', sans-serif;
+}
+.row {
+  display: flex; /* Makes the child divs align in a row */
+  align-items: stretch; /* Ensures both divs stretch to the same height */
+  
+}
+
+.border-dotted {
+  border: 2px dotted #747070; /* Light gray dotted border */
+  text-align: center;
+  display: flex; /* Flexbox inside the div */
+  flex-direction: column; /* Stack content vertically */
+  justify-content: space-between; /* Spread content vertically */
+ 
+}
+
+/* Custom class for the slideshow container */
+.carousel-container {
+  max-width: 80%;     /* Limit the width to 80% */
+  margin: 0 auto;     /* Center the container */
+}
+
+.carousel-item img {
+  width: 100%;        /* Ensure the image covers the entire width */
+  height: 400px;      /* Fixed height for consistency */
+  object-fit: cover;  /* Ensures the image maintains aspect ratio */
+}
+
+.carousel-inner {
+  max-width: 100%;    /* Prevent carousel from overflowing */
+  margin: 0 auto;     /* Center the carousel */
+}
+
+/* Adjust the rest of the carousel styling */
+.carousel-indicators button {
+  background-color: #333; /* Change indicator color */
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(1); /* Change arrow color to white */
+}
+
+/* Ensuring hover effects and img style is isolated */
+.carousel-container img:hover {
+  transform: scale(1.05);
+  transition: transform 0.2s ease-in-out;
+}
+
+.join-us-container {
+  flex-wrap: wrap; /* Allow wrapping for smaller screens */
+  gap: 20px;
+}
+
+.left-section {
+  max-width: 500px;
+  min-height: 300px;
+  background-color: #ff725e; /* Custom color for the left section */
+
+}
+
+.divider {
+  width: 50px;
+  height: 2px;
+  background-color: rgb(250, 250, 250);
+}
+
+.newsletter-form {
+  max-width: 300px;
+}
+
+.input-field {
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 12px;
+}
+
+.submit-button {
+  padding: 10px;
+}
+
+
+
+.right-section {
+  max-width: 400px;
+}
+
+.image {
+  object-fit: cover;
+}
+
+.small-div {
+  max-width: 700px; /* Set a fixed max width */
+  padding: 20px; /* Adjust padding to make the div more compact */
+}
+
+.top-seller-section {
+  background-color: #fff;
+  padding: 1.5rem 0;
+}
+
+.product-card {
+  border: 1px solid #eaeaea;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+  transition: transform 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.product-card:hover {
+  transform: translateY(-2px);
+}
+
+.image-container {
+  width: 100%;
+  height: 200px; /* Fixed image height */
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-container img {
+  height: 100%;
+  width: auto;
+  object-fit: cover;
+}
+.custom-yellow-btn {
+  background-color: #000000;  /* Bootstrap yellow */
+  color: rgb(255, 255, 255);
+  border-color: #000000;
+}
+
+.custom-yellow-btn:hover,
+.custom-yellow-btn:focus {
+    background-color: #000000;  /* Bootstrap yellow */
+  color: rgb(255, 255, 255);
+  border-color: #000000;
+}
+.custom-card {
+  max-width: 100%;
+  padding: 10px;
+  font-size: 0.9rem;
+}
+
+.image-wrapper {
+  height: 200px; /* Adjust as needed */
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-wrapper img {
+  height: 100%;
+  width: auto;
+  object-fit: cover;
+}
+.why-choose-us-section {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+}
+
+.icon-box {
+  padding: 20px;
+  background-color: #ebeaea;
+  border-radius: 8px;
+  height: 100%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.05);
+}
+
+.icon-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.icon {
+  font-size: 36px;
+}
+.latest-blog-section {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.blog-featured-img {
+  width: 100%;
+  height: 100%;
+  max-height: 320px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+
+.blog-highlight h3 {
+  color: #222;
+}
+
+.blog-highlight p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+.custom-readmore-btn {
+  background: linear-gradient(135deg, #ff7e5f, #feb47b);
+  color: #fff;
+  font-weight: 600;
+  padding: 10px 25px;
+  border-radius: 30px;
+  border: none;
+  box-shadow: 0 4px 15px rgba(255, 126, 95, 0.4);
+  transition: all 0.3s ease;
+  letter-spacing: 1px;
+  cursor: pointer;
+  user-select: none;
+  font-size: 1rem;
+}
+
+.custom-readmore-btn:hover,
+.custom-readmore-btn:focus {
+  background: linear-gradient(135deg, #feb47b, #ff7e5f);
+  box-shadow: 0 6px 20px rgba(254, 180, 123, 0.6);
+  transform: translateY(-3px);
+  outline: none;
+}

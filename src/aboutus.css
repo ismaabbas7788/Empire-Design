@@ -1,0 +1,93 @@
+.aboutus-section {
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .aboutus-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .divider {
+    width: 50px;
+    height: 5px;
+    background-color: red;
+  }
+  
+  .aboutus-text {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.6;
+  }
+  
+  .explore-btn {
+    background-color: #000;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 10px 60px;
+    font-size: 11px;
+    border: none;
+    clip-path: polygon(0% 0%, 95% 0%, 100% 100%, 5% 100%);
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    position: relative;
+  }
+  
+  .explore-btn:hover {
+    background-color: #444;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+  }
+  
+  
+  .who-we-are {
+  font-family: 'Arial', sans-serif;
+
+}
+
+.who-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #d9534f; /* Red color matching your design */
+}
+
+.who-description {
+  color: #555;
+  margin: 0 auto;
+  max-width: 800px;
+  line-height: 1.6;
+  font-size: 14px;
+}
+
+.icon-box {
+  text-align: center;
+  padding: 20px;
+}
+
+.icon-img {
+  width: 60px;
+  margin: 15px 0;
+}
+
+.icon-box h5 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.icon-box p {
+  color: #777;
+  line-height: 1.6;
+  font-size: 0.9rem;
+}
+
+.gray-line {
+  width: 60%;
+  height: 5px;
+  background-color: #ccc;
+  margin: 10px auto;
+}
+.custom-width {
+  max-width: 75%; /* Adjust width as needed, e.g., 75% or a fixed value */
+  margin: 0 auto; /* Centers the div horizontally */
+}

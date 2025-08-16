@@ -1,0 +1,140 @@
+.cart-slider {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 380px;
+  height: 100%;
+  background: linear-gradient(180deg, #ffffff, #f7f7f7);
+  box-shadow: -4px 0 15px rgba(0, 0, 0, 0.1);
+  transition: right 0.5s ease-in-out;
+  z-index: 1050;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px 0 0 10px;
+  transition: transform 0.3s ease-in-out;
+
+}
+
+.cart-slider.open {
+  right: 0;
+}
+
+.cart-slider-header {
+  background-color: #ffffff;
+  border-bottom: 2px solid #ddd;
+  border-radius: 10px 10px 0 0;
+}
+
+.cart-slider-header h4 {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.cart-slider-body {
+  flex-grow: 1;
+  overflow-y: auto;
+  padding: 15px;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.cart-item-details {
+  display: flex;
+  align-items: center;
+}
+
+.cart-item-image {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-right: 15px;
+}
+
+.cart-item-title {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.cart-item-price {
+  font-size: 0.875rem;
+  color: #6c757d;
+}
+
+.cart-item-actions {
+  text-align: right;
+}
+
+/* Make plus/minus buttons smaller */
+.cart-item-actions .btn {
+  font-size: 0.75rem;  /* smaller font */
+  padding: 4px 8px;    /* less padding */
+}
+
+/* Make remove button smaller */
+.cart-item-actions .btn-danger {
+  background-color: #f44336;
+  color: #fff;
+  font-size: 0.75rem;
+  padding: 4px 8px;
+}
+
+.cart-slider-footer {
+  background-color: #f8f9fa;
+  border-top: 2px solid #ddd;
+  padding: 15px;
+  border-radius: 0 0 10px 10px;
+}
+
+.cart-slider-footer .btn {
+  font-size: 1rem;
+  padding: 8px 12px;
+}
+
+.cart-slider .btn-close {
+  background: none;
+  border: none;
+  font-size: 20px;
+  color: #000;
+}
+
+/* Make the quantity badge smaller */
+.cart-item-actions .badge {
+  background-color: #007bff;
+  font-size: 0.75rem;
+  padding: 4px 6px;
+}
+
+.cart-item-actions .btn-outline-secondary {
+  border-color: #ddd;
+  color: #333;
+}
+
+/* Optional: make plus/minus buttons border thinner */
+.cart-item-actions .btn-outline-secondary {
+  border-color: #ddd;
+  color: #333;
+  font-size: 0.75rem;
+  padding: 4px 8px;
+}
+
+.quantity-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.quantity-controls span {
+  min-width: 24px;
+  text-align: center;
+  font-weight: bold;
+}

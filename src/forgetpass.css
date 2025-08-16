@@ -1,0 +1,78 @@
+/* General Styling */
+.container-fluid {
+  background-color: #f7f8fa;
+}
+
+.login-container {
+  max-width: 900px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.col-md-6 {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h3 {
+  font-family: 'Georgia', serif;
+  color: #343a40;
+}
+
+h5 {
+  color: #6c757d;
+}
+
+/* Form Styling */
+.form-control {
+  padding: 12px 14px;
+  border: 1px solid #ced4da;
+  border-radius: 6px;
+}
+
+.form-control:focus {
+  border-color: #495057;
+  box-shadow: 0 0 6px rgba(73, 80, 87, 0.2);
+}
+
+.btn-dark {
+  background-color: #000;
+  color: #fff;
+  border-radius: 8px;
+  padding: 10px 15px;
+}
+
+.btn-dark:hover {
+  background-color: #212529;
+}
+
+/* Alerts */
+.alert {
+  font-size: 14px;
+  padding: 10px;
+  margin-top: 15px;
+}
+
+.alert-info {
+  background-color: #e9f7fd;
+  color: #31708f;
+}
+
+.alert-danger {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+/* Link Styling */
+a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}

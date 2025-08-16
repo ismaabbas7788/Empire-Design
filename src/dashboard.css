@@ -1,0 +1,52 @@
+/* Sidebar */
+.sidebar {
+  width: 200px;
+  background-color: #2c3e50;
+  color: white;
+}
+
+/* Sidebar link */
+.sidebar-link {
+  color: #dcdde1;
+  padding: 8px 12px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
+  font-size: 0.95rem;
+}
+
+.sidebar-link:hover {
+  background-color: #34495e;
+  color: #ffffff;
+}
+
+.active-link {
+  background-color: #1abc9c;
+  color: white !important;
+}
+
+/* Card design */
+.dashboard-card {
+  background: linear-gradient(135deg, #2c3e50, #34495e);
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  text-align: center;
+}
+
+.dashboard-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.dashboard-icon {
+  font-size: 2rem;
+}
+
+.dashboard-card .card-title {
+  font-size: 1rem;
+  color: white;
+}

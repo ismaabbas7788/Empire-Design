@@ -1,0 +1,83 @@
+/* AnalyticsPage.css */
+
+.analytics-container {
+  padding: 2rem;
+  background-color: #f9fafb;
+  min-height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.analytics-header {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  color: #111827;
+}
+
+.analytics-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+@media (max-width: 768px) {
+  .analytics-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .analytics-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.analytics-card {
+  color: white;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 120px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  word-wrap: break-word;
+}
+
+.analytics-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Unique colors for each card */
+.analytics-card:nth-child(1) {
+  background-color: #3b82f6; /* Blue */
+}
+
+.analytics-card:nth-child(2) {
+  background-color: #10b981; /* Green */
+}
+
+.analytics-card:nth-child(3) {
+  background-color: #f59e0b; /* Amber */
+}
+
+.analytics-title {
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+  text-transform: uppercase;
+  opacity: 0.9;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.analytics-value {
+  font-size: 1.6rem;
+  font-weight: bold;
+  word-break: break-word;
+}
