@@ -34,7 +34,7 @@
     "react-scripts": "5.0.1",
     "react-use": "^17.6.0",
     "sweetalert2": "^11.22.0",
-    "three": "^0.175.0",
+    "three": "^0.172.0",
     "three-stdlib": "^2.35.15",
     "web-vitals": "^2.1.4"
   },
