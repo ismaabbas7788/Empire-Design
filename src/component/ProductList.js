@@ -157,23 +157,24 @@ const ProductList = () => {
       </div>
 
       {/* Pagination */}
-      <div className="d-flex justify-content-center my-4 gap-3">
-        <button
-          className="btn btn-outline-primary"
-          onClick={() => setPage((p) => Math.max(p - 1, 1))}
-          disabled={page === 1}
-        >
-          Previous
-        </button>
-        <span className="align-self-center">Page {page}</span>
-        <button
-          className="btn btn-outline-primary"
-          onClick={() => hasMore && setPage((p) => p + 1)}
-          disabled={!hasMore}
-        >
-          Next
-        </button>
-      </div>
+     <div className="d-flex justify-content-center my-4 gap-3">
+  <button
+    className="navigation-button"
+    onClick={() => setPage((p) => Math.max(p - 1, 1))}
+    disabled={page === 1}
+  >
+    Previous
+  </button>
+  <span className="align-self-center">Page {page}</span>
+  <button
+    className="navigation-button"
+    onClick={() => hasMore && setPage((p) => p + 1)}
+    disabled={!hasMore}
+  >
+    Next
+  </button>
+</div>
+
     </div>
   );
 };

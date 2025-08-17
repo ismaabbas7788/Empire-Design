@@ -84,6 +84,19 @@
   width: 1.2rem;
   height: 1.2rem;
 }
+.navigation-button {
+  background-color: black !important;
+  color: white !important;
+  border: none !important;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.navigation-button:disabled {
+  background-color: #444 !important; /* darker gray when disabled */
+  cursor: not-allowed;
+}
 
   /* Center wrapper is already handled via Bootstrap classes now */
   

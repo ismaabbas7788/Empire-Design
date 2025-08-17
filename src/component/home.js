@@ -155,7 +155,7 @@ const Home = () => {
           <div className="col-md-4">
             <div className="border-dotted p-4">
               <h5 className="text-center">Design your Dreams</h5>
-              <p className="text-center">Upload Your Space to Get Started</p>
+              <p className="text-center">Upload Room Image</p>
               <div className="d-flex justify-content-around">
                 <div className="text-center">
   <div className="text-center">
@@ -176,7 +176,6 @@ const Home = () => {
       reader.readAsDataURL(file);
     }}
   />
-  <p className="mt-1">Upload Room Image</p>
 </div>
 
 </div>

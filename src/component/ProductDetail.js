@@ -265,7 +265,7 @@ const ProductDetail = () => {
           ) : (
             <>
               <div className="d-flex align-items-center">
-                <button className="btn btn-outline-secondary" onClick={handleDecreaseQty}>
+                <button className="qty-btn" onClick={handleDecreaseQty}>
                   <FaMinus />
                 </button>
                 <input
@@ -275,7 +275,7 @@ const ProductDetail = () => {
                   readOnly
                   style={{ maxWidth: '60px' }}
                 />
-                <button className="btn btn-outline-secondary" onClick={handleIncreaseQty}>
+                <button className="qty-btn" onClick={handleIncreaseQty}>
                   <FaPlus />
                 </button>
               </div>
