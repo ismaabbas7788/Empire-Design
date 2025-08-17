@@ -55,7 +55,7 @@ export const Account  = () => {
           <img
             src={
               user.profileImage
-                ? `http://localhost:5000/uploads/${user.profileImage}`
+                ? `https://empire-design-backend.vercel.app/uploads/${user.profileImage}`
                 : '/images/default-profile.jpg'
             }
             alt="Profile"
