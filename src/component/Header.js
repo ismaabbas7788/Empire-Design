@@ -125,7 +125,7 @@ export const Header = () => {
                   aria-expanded="false"
                 >
                   <img
-                    src={user?.profileImage ? `http://localhost:5000/uploads/${user.profileImage}` : '/images/default-profile.jpg'}
+                    src={user?.profileImage ? `https://empire-design-backend.vercel.app/uploads/${user.profileImage}` : '/images/default-profile.jpg'}
                     alt="Profile"
                     className="rounded-circle"
                     style={{ width: '40px', height: '40px', objectFit: 'cover', border: '2px solid #ddd' }}
