@@ -45,7 +45,7 @@ function UserManagement() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    axios.post(`${process.env.REACT_APP_API_URL}/register`, formData)
+    axios.post(`${process.env.REACT_APP_API_URL}/users`, formData)
       .then(() => {
         Swal.fire('Success', 'Admin added successfully', 'success');
         setFormData({ firstName: '', lastName: '', email: '', phone: '', password: '', role: 'admin' });
@@ -76,7 +76,7 @@ function UserManagement() {
 
   const handleEditSubmit = (e) => {
     e.preventDefault();
-    axios.put(`${process.env.REACT_APP_API_URL}/register/${editUserId}`, editFormData)
+    axios.put(`${process.env.REACT_APP_API_URL}/users/${editUserId}`, editFormData)
       .then(() => {
         Swal.fire('Success', 'Record updated successfully', 'success');
         setEditUserId(null);
@@ -98,7 +98,7 @@ function UserManagement() {
       confirmButtonText: 'Yes, delete it!',
     }).then((result) => {
       if (result.isConfirmed) {
-        axios.delete(`${process.env.REACT_APP_API_URL}/register/${id}`)
+        axios.delete(`${process.env.REACT_APP_API_URL}/users/${id}`)
           .then(() => {
             Swal.fire('Deleted!', 'Record deleted successfully.', 'success');
             fetchRegisterData();
