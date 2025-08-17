@@ -1,158 +1,106 @@
-/* Header Section */
-.bg-white {
-  background-color: white;
+/* Header Layout */
+/* Add breathing space on top */
+.header {
+  padding-top: 12px; /* ✅ moves logo a bit down */
 }
-
-.border-bottom {
-  border-bottom: 1px solid #ccc;
-}
-
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
+.header-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap; /* ✅ allows wrapping on small screens */
 }
 
 .logo {
-  max-width: 130px;
-  border-radius: 100%;
+  max-width: 120px;
+  border-radius: 50%;
 }
 
-h1 {
-  font-size: 1.5rem;
-  margin: 0;
-  font-weight: bold;
-}
-
-.text-dark {
-  color: #333;
-}
-
-.nav {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.custom-nav-margin {
-  margin-top: 0.03rem; /* Adjust as needed */
-}
-
-
-.nav-item {
-  display: inline-block;
-  margin-right: 20px;
-  
- 
-}
-
-.nav-link {
-  text-decoration: none;
-  color: #333;
-  font-weight: 600;
-  font-size: 14px; /* Reduced font size */
-  text-transform: uppercase; /* Makes the links more prominent */
-}
-
-.nav-link:hover {
-  color: #ff5733; /* Custom hover color */
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.d-flex {
+/* Auth Links (Login / Register) */
+.auth-links {
   display: flex;
+  gap: 1rem; /* ✅ space between Login & Register */
+  align-items: center;
+}
+/* Profile section */
+.dropdown .btn {
+  display: flex;
+  align-items: center;  /* ✅ keeps image + text + arrow aligned */
+  gap: 6px;             /* ✅ space between items */
+  padding: 0;
 }
 
-.gap-3 {
-  gap: 1rem;
+/* Profile name */
+.profile-name {
+  line-height: 1;       /* ✅ ensures both names stay in one line */
+  white-space: nowrap;  /* ✅ prevents wrapping Bushra Arif to two lines */
+  font-size: 0.95rem;
+  color: #333;
 }
-
-.fs-4 {
+.site-title {
   font-size: 1.25rem;
-}
-
-.flex-grow-1 {
+  font-weight: bold;
+  text-align: center;
   flex-grow: 1;
 }
 
-.mt-3 {
-  margin-top: 1rem;
-}
-
-.search-bar {
-  margin-right: 20px; /* Adjust the value as needed */
-}
-
-/* Dropdown Menu Styling */
-.nav-item.dropdown {
-  position: relative;
-}
-
-.nav-link.dropdown-toggle {
+.right-section {
   display: flex;
   align-items: center;
-  padding: 10px 15px;
-  border-radius: 50px;
-  background-color: #f8f9fa;
-  transition: background-color 0.3s ease, transform 0.3s ease;
-  
+  gap: 1rem;
 }
 
-.nav-link.dropdown-toggle:hover {
-  color: white;
-  transform: scale(1.05); /* Subtle zoom effect */
+/* Profile Image */
+.profile-img {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border: 2px solid #ddd;
 }
 
-.dropdown-menu {
-  background-color: white;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 10px 0;
-  min-width: 200px; /* Ensures the dropdown is not too wide */
-  display: none;
-  position: absolute;
-  z-index: 1000;
+/* Search */
+.search-bar {
+  min-width: 220px;
 }
 
-.dropdown-menu.show {
-  display: block;
-}
-
-.dropdown-item {
-  padding: 6px 20px; /* Slightly reduced padding for smaller font */
-  font-size: 12px; /* Smaller font size */
-  color: #333;
-  border-radius: 5px;
-}
-
-/* Remove hover color change */
-.dropdown-item:hover {
-  background-color: #f0f0f0; /* Hover effect without color change */
-}
-
-.dropdown-item:active {
-  background-color: #ff5733;
-  color: white;
-}
-
-/* Accessibility for dropdown menus */
-.nav-item.dropdown:hover .dropdown-menu {
-  display: block;
-}
-/* Clean profile dropdown button */
-.dropdown .btn {
-  box-shadow: none !important;
-}
-
-.dropdown-menu {
-  min-width: 180px;
-}
-
-.dropdown-menu li a, .dropdown-menu li button {
-  font-size: 0.9rem;
-}
-
-/* Clean cart badge */
-.badge {
+.cart-icon .badge {
+  font-size: 0.7rem;
   font-weight: normal;
+}
+
+/* Navigation */
+.nav-wrapper {
+  display: none;
+  background: #fff;
+}
+
+.nav-wrapper.open {
+  display: block;
+}
+
+@media (min-width: 992px) {
+  .nav-wrapper {
+    display: block !important;
+  }
+}
+
+/* Hamburger */
+.hamburger {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .site-title {
+    display: none; /* hide tagline on small screens */
+  }
+  .search-bar {
+    min-width: 150px;
+    flex: 1;
+  }
+  .auth-links {
+    display: flex;
+    gap: 0.5rem;
+  }
 }
