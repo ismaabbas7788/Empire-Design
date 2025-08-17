@@ -97,18 +97,7 @@ const ContactUs = () => {
               )}
             </form>
 
-            <div className="social-links mt-3">
-              <p>Get in touch</p>
-              <a href="#" className="me-2">
-                <i className="fab fa-facebook"></i>
-              </a>
-              <a href="#" className="me-2">
-                <i className="fab fa-twitter"></i>
-              </a>
-              <a href="#">
-                <i className="fab fa-instagram"></i>
-              </a>
-            </div>
+           
           </div>
         </div>
       </div>

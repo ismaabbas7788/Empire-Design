@@ -47,10 +47,10 @@ const Footer = () => {
           <div className="col">
             <h5>Helpful Links</h5>
             <ul>
-              <li><a href="#">About Us</a></li>
-              <li><a href="#">Delivery and Returns Policy</a></li>
-              <li><a href="#">Help & FAQ</a></li>
-              <li><a href="#">Service for Professionals</a></li>
+              <li><a href="/aboutus">About Us</a></li>
+              <li><a href="/contactus">Contact Us</a></li>
+              <li><a href="/reviews">Reviews</a></li>
+              <li><a href="/all-products">See All Products</a></li>
             </ul>
           </div>
           <div className="col">
@@ -89,13 +89,9 @@ const Footer = () => {
 
         <div className="footer-bottom">
           <p>
-            © 2022 <a href="mailto:kreya@example.com">kreyaparekh@gmail.com</a>. Designed by
+         Developed by: Isma Abbas and Areeba Zafar
           </p>
-          <div className="social-icons">
-            <a href="#"><i className="bi bi-facebook"></i></a>
-            <a href="#"><i className="bi bi-twitter"></i></a>
-            <a href="#"><i className="bi bi-instagram"></i></a>
-          </div>
+          
         </div>
       </div>
     </footer>
