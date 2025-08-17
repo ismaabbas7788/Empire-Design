@@ -113,7 +113,7 @@ const Decorator = () => {
                   }}
                 >
                   <img
-                    src={`http://localhost:5000/images/${item.image}`}
+                    src={`/images/${item.image}`}
                     alt={item.name}
                     style={{
                       width: "100%",
