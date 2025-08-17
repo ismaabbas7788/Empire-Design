@@ -26,7 +26,7 @@ function UserManagement() {
   }, []);
 
   const fetchRegisterData = () => {
-    axios.get(`${process.env.REACT_APP_API_URL}/register`)
+    axios.get(`${process.env.REACT_APP_API_URL}/users`)
       .then((response) => {
         const data = response.data;
         if (data.columns && data.users) {
