@@ -1,106 +1,158 @@
-/* Header Layout */
-/* Add breathing space on top */
-.header {
-  padding-top: 12px; /* ✅ moves logo a bit down */
+/* Header Section */
+.bg-white {
+  background-color: white;
 }
-.header-top {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap; /* ✅ allows wrapping on small screens */
+
+.border-bottom {
+  border-bottom: 1px solid #ccc;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .logo {
-  max-width: 120px;
-  border-radius: 50%;
+  max-width: 130px;
+  border-radius: 100%;
 }
 
-/* Auth Links (Login / Register) */
-.auth-links {
-  display: flex;
-  gap: 1rem; /* ✅ space between Login & Register */
-  align-items: center;
-}
-/* Profile section */
-.dropdown .btn {
-  display: flex;
-  align-items: center;  /* ✅ keeps image + text + arrow aligned */
-  gap: 6px;             /* ✅ space between items */
-  padding: 0;
+h1 {
+  font-size: 1.5rem;
+  margin: 0;
+  font-weight: bold;
 }
 
-/* Profile name */
-.profile-name {
-  line-height: 1;       /* ✅ ensures both names stay in one line */
-  white-space: nowrap;  /* ✅ prevents wrapping Bushra Arif to two lines */
-  font-size: 0.95rem;
+.text-dark {
   color: #333;
 }
-.site-title {
-  font-size: 1.25rem;
-  font-weight: bold;
-  text-align: center;
-  flex-grow: 1;
+
+.nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
-.right-section {
+.custom-nav-margin {
+  margin-top: 0.03rem; /* Adjust as needed */
+}
+
+
+.nav-item {
+  display: inline-block;
+  margin-right: 20px;
+  
+ 
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+  font-size: 14px; /* Reduced font size */
+  text-transform: uppercase; /* Makes the links more prominent */
+}
+
+.nav-link:hover {
+  color: #ff5733; /* Custom hover color */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.d-flex {
   display: flex;
-  align-items: center;
+}
+
+.gap-3 {
   gap: 1rem;
 }
 
-/* Profile Image */
-.profile-img {
-  width: 40px;
-  height: 40px;
-  object-fit: cover;
-  border: 2px solid #ddd;
+.fs-4 {
+  font-size: 1.25rem;
 }
 
-/* Search */
+.flex-grow-1 {
+  flex-grow: 1;
+}
+
+.mt-3 {
+  margin-top: 1rem;
+}
+
 .search-bar {
-  min-width: 220px;
+  margin-right: 20px; /* Adjust the value as needed */
 }
 
-.cart-icon .badge {
-  font-size: 0.7rem;
-  font-weight: normal;
+/* Dropdown Menu Styling */
+.nav-item.dropdown {
+  position: relative;
 }
 
-/* Navigation */
-.nav-wrapper {
+.nav-link.dropdown-toggle {
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  border-radius: 50px;
+  background-color: #f8f9fa;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  
+}
+
+.nav-link.dropdown-toggle:hover {
+  color: white;
+  transform: scale(1.05); /* Subtle zoom effect */
+}
+
+.dropdown-menu {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 10px 0;
+  min-width: 200px; /* Ensures the dropdown is not too wide */
   display: none;
-  background: #fff;
+  position: absolute;
+  z-index: 1000;
 }
 
-.nav-wrapper.open {
+.dropdown-menu.show {
   display: block;
 }
 
-@media (min-width: 992px) {
-  .nav-wrapper {
-    display: block !important;
-  }
+.dropdown-item {
+  padding: 6px 20px; /* Slightly reduced padding for smaller font */
+  font-size: 12px; /* Smaller font size */
+  color: #333;
+  border-radius: 5px;
 }
 
-/* Hamburger */
-.hamburger {
-  background: none;
-  border: none;
-  font-size: 1.5rem;
+/* Remove hover color change */
+.dropdown-item:hover {
+  background-color: #f0f0f0; /* Hover effect without color change */
 }
 
-/* Responsive tweaks */
-@media (max-width: 768px) {
-  .site-title {
-    display: none; /* hide tagline on small screens */
-  }
-  .search-bar {
-    min-width: 150px;
-    flex: 1;
-  }
-  .auth-links {
-    display: flex;
-    gap: 0.5rem;
-  }
+.dropdown-item:active {
+  background-color: #ff5733;
+  color: white;
+}
+
+/* Accessibility for dropdown menus */
+.nav-item.dropdown:hover .dropdown-menu {
+  display: block;
+}
+/* Clean profile dropdown button */
+.dropdown .btn {
+  box-shadow: none !important;
+}
+
+.dropdown-menu {
+  min-width: 180px;
+}
+
+.dropdown-menu li a, .dropdown-menu li button {
+  font-size: 0.9rem;
+}
+
+/* Clean cart badge */
+.badge {
+  font-weight: normal;
 }
